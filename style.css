@@ -453,7 +453,7 @@ h3 {
   top: -50px;
 }
 .over_signin::before {
-  content: url(./imag/arrow.png);
+  content: url(./img/arrow.png);
   position: relative;
   width: 56px;
   height: 41px;
