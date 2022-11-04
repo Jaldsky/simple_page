@@ -1,25 +1,8 @@
-let recursionDeepLimit = 17
-
-const createDiv = (recursionDeepCounter) => {
-  let elemArray = document.getElementsByClassName('leaf')
-
-  Array.from(elemArray).forEach((element) => {
-    let newLeaf = document.createElement('div')
-    newLeaf.className = 'leaf'
-    element.appendChild(newLeaf)
-
-    newLeaf = document.createElement('div')
-    newLeaf.className = 'leaf'
-    element.appendChild(newLeaf)
-
-    element.classList.remove('leaf')
-  })
-
-  if (recursionDeepCounter < recursionDeepLimit) {
-    createDiv(++recursionDeepCounter)
-  }
-}
-
+const start = new Date();
 window.addEventListener('DOMContentLoaded', () => {
-  createDiv(0)
+    console.log(`DOM fully loaded and parsed; Time: ${Date.now() - start} ms`)
+})  
+window.addEventListener('load', () => {
+    console.log(`Page is fully loaded; Time: ${Date.now() - start} ms`)
 })
+  
